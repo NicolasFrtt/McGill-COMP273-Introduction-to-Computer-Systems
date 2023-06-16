@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.4.1" version="1.0">
+  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </tool>
+    <tool name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </tool>
+    <tool name="Probe">
+      <a name="appearance" val="NewPins"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Constant">
+      <a name="facing" val="south"/>
+      <a name="value" val="0x0"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1">
+    <tool name="PLA">
+      <a name="table" val=""/>
+    </tool>
+  </lib>
+  <lib desc="#Plexers" name="2">
+    <tool name="Multiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+    <tool name="Demultiplexer">
+      <a name="enable" val="false"/>
+    </tool>
+  </lib>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="T Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="J-K Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="S-R Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="Shift Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="Random">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="RAM">
+      <a name="appearance" val="logisim_evolution"/>
+    </tool>
+    <tool name="ROM">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#HDL-IP" name="6">
+    <tool name="VHDL Entity">
+      <a name="content">--------------------------------------------------------------------------------&#13;
+-- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+library ieee;&#13;
+  use ieee.std_logic_1164.all;&#13;
+  --use ieee.numeric_std.all;&#13;
+&#13;
+entity VHDL_Component is&#13;
+  port(&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+    );&#13;
+end VHDL_Component;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+architecture type_architecture of VHDL_Component is&#13;
+&#13;
+&#13;
+begin&#13;
+&#13;
+&#13;
+end type_architecture;&#13;
+</a>
+    </tool>
+  </lib>
+  <lib desc="#TCL" name="7">
+    <tool name="TclGeneric">
+      <a name="content">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+entity TCL_Generic is&#13;
+  port(&#13;
+    --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+&#13;
+	  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+  );&#13;
+end TCL_Generic;&#13;
+</a>
+    </tool>
+  </lib>
+  <lib desc="#Base" name="8">
+    <tool name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="text" val=""/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <main name="main"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="text" val=""/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="main">
+    <a name="appearance" val="classic"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(130,580)" name="Clock"/>
+    <comp lib="0" loc="(810,530)" name="Splitter">
+      <a name="fanout" val="10"/>
+      <a name="incoming" val="10"/>
+    </comp>
+    <comp lib="4" loc="(330,520)" name="Counter">
+      <a name="appearance" val="classic"/>
+      <a name="max" val="0x9"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="4" loc="(500,470)" name="ROM">
+      <a name="addrWidth" val="4"/>
+      <a name="appearance" val="classic"/>
+      <a name="contents">addr/data: 4 10
+0 4 40 1 100 4 40 4
+100 4
+</a>
+      <a name="dataWidth" val="10"/>
+    </comp>
+    <comp lib="5" loc="(1010,290)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1050,290)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1090,290)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1130,290)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1170,290)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1210,290)" name="LED">
+      <a name="color" val="#18f04e"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(1250,290)" name="LED">
+      <a name="color" val="#18f04e"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(890,290)" name="LED">
+      <a name="color" val="#f00013"/>
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="5" loc="(930,290)" name="LED">
+      <a name="facing" val="south"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="5" loc="(970,290)" name="LED">
+      <a name="facing" val="south"/>
+    </comp>
+    <comp lib="8" loc="(1007,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="3"/>
+    </comp>
+    <comp lib="8" loc="(1049,262)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="4"/>
+    </comp>
+    <comp lib="8" loc="(1088,262)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="5"/>
+    </comp>
+    <comp lib="8" loc="(1130,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="6"/>
+    </comp>
+    <comp lib="8" loc="(1171,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="7"/>
+    </comp>
+    <comp lib="8" loc="(1211,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="8"/>
+    </comp>
+    <comp lib="8" loc="(1249,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="9"/>
+    </comp>
+    <comp lib="8" loc="(665,133)" name="Text">
+      <a name="font" val="Arial Black plain 18"/>
+      <a name="text" val="First cycle is blank. "/>
+    </comp>
+    <comp lib="8" loc="(669,91)" name="Text">
+      <a name="font" val="SansSerif bold 32"/>
+      <a name="text" val="Nicolas FERTOUT, 260826282"/>
+    </comp>
+    <comp lib="8" loc="(684,171)" name="Text">
+      <a name="font" val="Arial Black plain 18"/>
+      <a name="text" val="When it reaches the final digit, it comes back to the beginning (blank on the next iteration, and then the 1st digit again)."/>
+    </comp>
+    <comp lib="8" loc="(888,262)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="0"/>
+    </comp>
+    <comp lib="8" loc="(927,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="1"/>
+    </comp>
+    <comp lib="8" loc="(968,261)" name="Text">
+      <a name="font" val="SansSerif plain 24"/>
+      <a name="text" val="2"/>
+    </comp>
+    <wire from="(1010,290)" to="(1010,460)"/>
+    <wire from="(1050,290)" to="(1050,470)"/>
+    <wire from="(1090,290)" to="(1090,480)"/>
+    <wire from="(1130,290)" to="(1130,490)"/>
+    <wire from="(1170,290)" to="(1170,500)"/>
+    <wire from="(1210,290)" to="(1210,510)"/>
+    <wire from="(1250,290)" to="(1250,520)"/>
+    <wire from="(130,580)" to="(310,580)"/>
+    <wire from="(310,540)" to="(310,580)"/>
+    <wire from="(330,520)" to="(480,520)"/>
+    <wire from="(480,480)" to="(480,520)"/>
+    <wire from="(480,480)" to="(500,480)"/>
+    <wire from="(740,530)" to="(810,530)"/>
+    <wire from="(830,430)" to="(890,430)"/>
+    <wire from="(830,440)" to="(930,440)"/>
+    <wire from="(830,450)" to="(970,450)"/>
+    <wire from="(830,460)" to="(1010,460)"/>
+    <wire from="(830,470)" to="(1050,470)"/>
+    <wire from="(830,480)" to="(1090,480)"/>
+    <wire from="(830,490)" to="(1130,490)"/>
+    <wire from="(830,500)" to="(1170,500)"/>
+    <wire from="(830,510)" to="(1210,510)"/>
+    <wire from="(830,520)" to="(1250,520)"/>
+    <wire from="(890,290)" to="(890,430)"/>
+    <wire from="(930,290)" to="(930,440)"/>
+    <wire from="(970,290)" to="(970,450)"/>
+  </circuit>
+</project>
